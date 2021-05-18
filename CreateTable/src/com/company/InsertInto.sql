@@ -76,3 +76,4 @@ where ClassName = 'A1';
 select S.StudentId, S.StudentName, Sub.SubName, M.Mark
 from Student S join Mark M on S.StudentId = M.StudentId join Subject Sub on Sub.SubId = M.SubId
 where SubName = 'CF';
+
