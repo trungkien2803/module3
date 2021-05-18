@@ -77,3 +77,22 @@ select S.StudentId, S.StudentName, Sub.SubName, M.Mark
 from Student S join Mark M on S.StudentId = M.StudentId join Subject Sub on Sub.SubId = M.SubId
 where SubName = 'CF';
 
+
+select * from Student
+where StudentName like 'H%';
+
+select * from class
+where month(StartDate) = 12;
+
+select * from Subject
+where Credit between 3 and 5;
+
+update student
+set ClassId = 2
+where StudentName = 'Hùng';
+
+select S.StudentName,Sub.SubName,M.Mark
+from student S join Mark M on S.StudentId = M.StudentId join Subject Sub on Sub.SubId = M.SubId
+order by M.Mark desc, StudentName asc;
+
+
