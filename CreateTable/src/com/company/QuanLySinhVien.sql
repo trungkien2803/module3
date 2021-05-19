@@ -129,3 +129,21 @@ from student S
          join Mark M on S.StudentId = M.StudentId
 group by S.StudentId, S.StudentName
 having AVG(Mark) >= all (select AVG(Mark) from Mark group by Mark.StudentId);
+
+select *
+from subject
+group by SubId
+having max(Credit) >= all (select max(Credit) from subject group by SubId);
+
+select Subject.SubId, SubName, Credit, Status, max(Mark) as "Max Mark"
+from subject
+         join Mark M on Subject.SubId = M.SubId
+group by Subject.SubId
+having max(Mark) >= all (select max(Mark) from mark group by Mark.MarkId);
+
+select Student.StudentId, Student.StudentName, avg(Mark)
+from student
+         join Mark M on Student.StudentId = M.StudentId
+group by Student.StudentId, Student.StudentName
+order by avg(Mark) desc;
+
