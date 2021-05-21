@@ -49,8 +49,23 @@ DELIMITER ;
 
 set @counter = 1;
 
-call SetCounter(@counter,1);
-call SetCounter(@counter,1);
-call SetCounter(@counter,5);
+call SetCounter(@counter, 1);
+call SetCounter(@counter, 1);
+call SetCounter(@counter, 5);
 select @counter;
 
+create view customers_views as
+select customerNumber, customerName, phone
+from customers;
+
+select *
+from customers_views;
+
+create or replace view customer_views as
+select customerNumber, customerName, contactFirstName, contactLastName, phone
+from customers
+where city = 'Nantes';
+
+select * from customer_views;
+
+drop view customers_views;
