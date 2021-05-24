@@ -1,0 +1,22 @@
+.blue{
+    color: #3244ad;
+}
+
+.bold{
+    font-weight: bold;
+}
+.element {
+    text-indent: 50px;
+}
+div{
+    margin-left: 50px;
+    font-size: 20px;
+    border-top:1px solid black ;
+}
+h1 {
+    margin-left: 50px;
+}
+sub {
+    vertical-align: super;
+    font-size: 10px;
+}
