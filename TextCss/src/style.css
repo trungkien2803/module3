@@ -20,3 +20,6 @@ sub {
     vertical-align: super;
     font-size: 10px;
 }
+html{
+    font-family: Arial;
+}
