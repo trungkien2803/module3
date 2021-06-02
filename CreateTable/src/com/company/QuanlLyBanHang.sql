@@ -1,5 +1,5 @@
 create database quanlibanhang;
-
+use quanlibanhang;
 create table Customer
 (
     id   int,
