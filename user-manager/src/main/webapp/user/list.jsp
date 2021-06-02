@@ -40,7 +40,7 @@
 </div>
 
 <h1>FIND USER BY COUNTRY</h1>
-<form method="post">
+<form>
     <input name="country" placeholder="Country">
     <button type="submit">FIND</button>
 </form>
